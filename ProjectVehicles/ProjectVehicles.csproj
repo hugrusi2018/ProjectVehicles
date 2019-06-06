@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-ProjectVehicles-323DFCEE-E1A6-4781-AFC8-0030882159D9</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+    <PackageReference Include="Sendgrid" Version="9.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectVehicles.DAL\ProjectVehicles.DAL.csproj" />
+    <ProjectReference Include="..\ProjectVehicles.Logica\ProjectVehicles.Logica.csproj" />
+  </ItemGroup>
+
+</Project>

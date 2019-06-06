@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ProjectVehicles.Logica.Models.ViewModel.CarsIndexViewModel>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.ActionLink(" ",
+                "Create",
+                "Cars",
+                null,
+                new { @class = "btn btn-primary fas fa-plus-circle"})
+
+<table class="table table-bordered">
+
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.CarName)</td>
+        <td>@Html.DisplayNameFor(model => model.CarModel)</td>
+        <td>@Html.DisplayNameFor(model => model.CarDisplacement)</td>
+        <td>@Html.DisplayNameFor(model => model.FuelId)</td>
+        <td>@Html.DisplayNameFor(model => model.CarCapacity)</td>
+        <td>@Html.DisplayNameFor(model => model.SerId)</td>
+        <td>@Html.DisplayNameFor(model => model.CarExpirationDateSoat)</td>
+        <td>@Html.DisplayNameFor(model => model.CarExpirationDateRtm)</td>
+        <td>@Html.DisplayNameFor(model => model.CarExpirationDateSt)</td>
+        <td>@Html.DisplayNameFor(model => model.CarKilometers)</td>
+        <td>@Html.DisplayNameFor(model => model.StaId)</td>
+        <td>@Html.DisplayNameFor(model => model.CarCreatedAt)</td>
+        <td></td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+
+        @*<td>@Html.ActionLink(" ", "Index", "Task", new { projectId = item.Id }, new { @class = "btn btn-primary fas fa-tasks btn-sm" })</td>
+        <td>@Html.ActionLink(" ", "Calendar", "Task", new { projectId = item.Id }, new { @class = "btn btn-primary fas fa-tasks btn-sm" })</td>*@
+        <td>@Html.DisplayFor(modelItem => item.CarName)</td>
+        <td>@Html.DisplayFor(modelItem => item.CarModel)</td>
+        <td>@Html.DisplayFor(modelItem => item.CarDisplacement)</td>
+        <td>@Html.DisplayFor(modelItem => item.FuelId)</td>
+        <td>@Html.DisplayFor(modelItem => item.CarCapacity)</td>
+        <td>@Html.DisplayFor(modelItem => item.SerId)</td>
+        <td>@Html.DisplayFor(modelItem => item.CarExpirationDateSoat)</td>
+        <td>@Html.DisplayFor(modelItem => item.CarExpirationDateRtm)</td>
+        <td>@Html.DisplayFor(modelItem => item.CarExpirationDateSt)</td>
+        <td>@Html.DisplayFor(modelItem => item.CarKilometers)</td>
+        <td>@Html.DisplayFor(modelItem => item.StaId)</td>
+        <td>@Html.DisplayFor(modelItem => item.CarCreatedAt)</td>
+        @*<td>
+            @Html.ActionLink(" ",
+                    "Edit",
+                    "Projects",
+                    new {id = item.Id },
+                    new { @class = "btn btn-primary fas fa-edit btn-sm" })
+
+            @Html.ActionLink(" ",
+        "Details",
+        "Projects",
+        new {id = item.Id },
+        new { @class = "btn btn-primary fas fa-info btn-sm" })
+
+            @Html.ActionLink(" ",
+         "Delete",
+         "Projects",
+         new {id = item.Id },
+         new { @class = "btn btn-primary fas fa-trash btn-sm" })
+
+        </td>*@
+    </tr>
+    }
+
+</table>
+
